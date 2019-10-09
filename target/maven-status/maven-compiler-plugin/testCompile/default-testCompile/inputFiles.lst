@@ -40,8 +40,11 @@ C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\common\
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\screenshot\CaptureScreenshotFullProg.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\snippets\java\FlowStaticFieldAndConstructor.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\basic\LearnSeleniumBaseClass.java
+C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\basic\XPath.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\basic\RobotClass.java
+C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\restassured\poc\learning\SamplePost.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\snippets\java\abstractclass\ChildNormalClass.java
+C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\restassured\poc\learning\SampleGet.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\snippets\java\abstractclass\FatherAbstractClass.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\java\designpattern\builder\Ex1Computer.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\common\readAndWriteExcel\ReadNumericalDataFromExcelUsingApachePOi.java
@@ -57,6 +60,7 @@ C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\common\
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\screenshot\CaptureScreenshotInSeleniumWebdriver.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\snippets\java\FibonacciSeries.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\basic\HandleCalender.java
+C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\basic\WaitInSelenium.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\snippets\java\methodoverriding\Snip7.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\com\idm\ui\basic\ProfileAndDesiredCapabilityInBrowser.java
 C:\Testing\backup\codebase\IDMFunctionalAutomation\src\test\java\java\designpattern\builder\Ex2TestPersonBuilderPattern.java
