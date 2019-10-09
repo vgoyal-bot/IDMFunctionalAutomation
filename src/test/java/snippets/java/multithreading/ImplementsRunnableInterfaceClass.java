@@ -1,7 +1,6 @@
 package snippets.java.multithreading;
 
 public class ImplementsRunnableInterfaceClass implements Runnable {
-    @Override
     public void run() {
         System.out.println("Inside run method");
     }

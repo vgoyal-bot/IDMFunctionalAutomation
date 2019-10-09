@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 
+import com.idm.common.BaseClass;
 import com.idm.common.ConstantsSelenium;
 
 /**
@@ -21,16 +22,32 @@ import com.idm.common.ConstantsSelenium;
  * 6. release() Release the current control
  * @author vinitg
  */
-public class ActionClass {
+public class ActionClass extends BaseClass{
 
-    static {
-        // to know about the below lines: what they do check static block of LearnSeleniumBaseClass.java
-        System.setProperty(ConstantsSelenium.GECKO_DRIVER_PROP1, ConstantsSelenium.GECKO_DRIVER_PATH);
-        System.setProperty(ConstantsSelenium.CHROME_DRIVER_PROP, ConstantsSelenium.CHROME_DRIVER_PATH);
-        System.setProperty(ConstantsSelenium.IE_DRIVER_PROP, ConstantsSelenium.IE_DRIVER_PATH);
-        System.setProperty(ConstantsSelenium.ME_DRIVER_PROP, ConstantsSelenium.ME_DRIVER_PATH);
-    }
-
+	@Test
+	public void allInOneForINterview() {
+		WebDriver driver = new FirefoxDriver();
+        driver.get("http://www.google.com");
+        driver.manage().window().maximize();
+        WebElement element = driver.findElement(By.name("q"));
+        WebElement draggableElement = driver.findElement(By.name("q"));
+        WebElement droppableElement = driver.findElement(By.name("q"));
+        
+        Actions act = new Actions(driver);
+        act.contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN)
+        											.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+        
+        act.contextClick(element).sendKeys(Keys.ARROW_DOWN)
+        											.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+        
+        act.moveToElement(element).build().perform();;
+        
+        act.moveToElement(element).click().keyDown(element, Keys.SHIFT).sendKeys("vinit").keyUp(Keys.SHIFT)
+        											.sendKeys(".itm").doubleClick().contextClick().build().perform();
+        
+        act.dragAndDrop(draggableElement, droppableElement).build().perform();
+	}
+	
     /**
      * contextClick()-- Right click on page
      */
@@ -41,8 +58,19 @@ public class ActionClass {
         driver.manage().window().maximize();
 
         Actions act = new Actions(driver);
-        act.contextClick(driver.findElement(By.linkText("Gujarati"))).sendKeys(Keys.ARROW_DOWN)
-        .sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+        act.contextClick().sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
+    }
+    
+    /**
+     * contextclick(element) - it will right click on particular element.
+     */
+    @Test
+    public void testContextClick() {
+    	WebDriver driver = new FirefoxDriver();
+        driver.get("http://www.google.com");
+        driver.manage().window().maximize();
+        
+        new Actions(driver).contextClick(driver.findElement(By.name("q"))).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ENTER).build().perform();
     }
 
     @Test

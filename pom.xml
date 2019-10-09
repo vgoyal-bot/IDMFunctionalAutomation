@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   
   <properties>
-		<!-- <suiteXmlFile>testng.xml</suiteXmlFile> -->
+		<suiteXmlFile>testng_parallelExecution.xml</suiteXmlFile>
 		<maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
 	</properties>
 
@@ -98,6 +98,56 @@
 		    <artifactId>mail</artifactId>
 		    <version>1.4.5</version>
 		</dependency>
-				
+		
+		<!-- Below are rest assured related dependencies -->
+		
+		<dependency>
+              <groupId>io.rest-assured</groupId>
+			  <artifactId>rest-assured</artifactId>
+	          <version>3.0.7</version>	         
+		</dependency>
+		
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>json-path</artifactId>
+		      <version>3.0.7</version>
+		</dependency>
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>xml-path</artifactId>
+		      <version>3.0.7</version>
+		</dependency>
+		
+		<dependency>
+		      <groupId>io.rest-assured</groupId>
+		      <artifactId>json-schema-validator</artifactId>
+		      <version>3.0.7</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.14.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/javax.json/javax.json-api -->
+		<dependency>
+		    <groupId>javax.json</groupId>
+		    <artifactId>javax.json-api</artifactId>
+		    <version>1.1.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.glassfish/javax.json -->
+		<dependency>
+		    <groupId>org.glassfish</groupId>
+		    <artifactId>javax.json</artifactId>
+		    <version>1.1.4</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20170516</version>
+		</dependency>
 	</dependencies>
 </project>

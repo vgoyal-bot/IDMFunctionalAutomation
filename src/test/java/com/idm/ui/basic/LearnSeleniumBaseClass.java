@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.By.ByCssSelector;
@@ -20,7 +21,6 @@ import org.testng.annotations.Test;
 import com.idm.common.BaseClass;
 import com.idm.common.BrowserFactory;
 import com.idm.common.ConstantsSelenium;
-import com.idm.ui.proxyAndCertificates.HandleDeveloperModeNotificationSSLDisabilities;
 
 public class LearnSeleniumBaseClass extends BaseClass {
 
@@ -56,10 +56,33 @@ public class LearnSeleniumBaseClass extends BaseClass {
     }
 
     @Test
-    public void basicChromeProg() {
+    public void getCoordinatesDimensionCSSValuesOfTextBox() {
+    	
         WebDriver driver = new ChromeDriver();
         driver.get(ConstantsSelenium.FACEBOOK_URL);
         driver.manage().window().maximize();
+        
+        WebElement eleTextBox = driver.findElement(By.id("email"));
+        int xCoordinate = eleTextBox.getLocation().getX();   	// to get the x and y coordinate.
+        int yCoordinate = eleTextBox.getLocation().getY();
+        
+        System.out.println("xCoordinate: " +xCoordinate + ", yCoordinate: " +yCoordinate);
+        
+        int width = eleTextBox.getSize().getWidth();  			// to get the dimensions
+        int height = eleTextBox.getSize().getHeight();
+        
+        System.out.println("Width: " +width + ", Height: " +height);
+        
+        System.out.println("background color: " + eleTextBox.getCssValue("background-color"));
+        System.out.println("color: " + eleTextBox.getCssValue("color"));
+        
+        driver.findElement(By.id("u_0_b")).click();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.navigate().forward();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.navigate().back();
+        driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+        driver.quit();
     }
 
     @Test
@@ -72,7 +95,7 @@ public class LearnSeleniumBaseClass extends BaseClass {
     @Test
     public void openFacebookPageInChrome() {
         WebDriver driver = null;
-        driver = HandleDeveloperModeNotificationSSLDisabilities.hideOrDisablePopupNotificationInChrome(driver);
+        driver = ProfileAndDesiredCapabilityInBrowser.hideOrDisablePopupNotificationInChrome(driver);
         driver.get(ConstantsSelenium.FACEBOOK_URL);
         driver.manage().window().maximize();
         WebElement element = driver.findElement(By.xpath("//input[@id='firstname']"));

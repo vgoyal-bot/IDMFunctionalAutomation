@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.idm.ui.HandleCalender">
+      <class name="com.idm.ui.basic.WaitInSelenium">
         <methods>
+          <include name="withNormalWait"/>
           <include name="beforeSuite"/>
-          <include name="test1"/>
         </methods>
-      </class> <!-- com.idm.ui.HandleCalender -->
+      </class> <!-- com.idm.ui.basic.WaitInSelenium -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
