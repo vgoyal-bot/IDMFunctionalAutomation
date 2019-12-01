@@ -2,15 +2,19 @@ package snippets.java.methodoverriding;
 
 public class ParentClassPoly {
 
-    public void display() {
-        System.out.println("Parent Class + noArgument");
+    public void scenario1() {
+        System.out.println("only in Parent Class");
+    }
+    
+    public void scenario3() {
+        System.out.println("both in parent and child override, but parent method called");
     }
 
-    public void display(int a) {
-        System.out.println("Parent Class + one int argument");
+    public void scenario4() {
+        System.out.println("both in parent and child, but not override, but parent method called");
     }
-
-    public void display(String a) {
-        System.out.println("Parent Class + one string argument");
+    
+    public void scenario5() {
+        System.out.println("present in parent only");
     }
 }

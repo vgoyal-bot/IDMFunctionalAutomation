@@ -24,30 +24,33 @@ import com.idm.common.ConstantsSelenium;
 
 public class LearnSeleniumBaseClass extends BaseClass {
 
-    static {
-        // property to set Gecko driver path required for selenium 3 and to run
-        // in firefox
-        System.setProperty(ConstantsSelenium.GECKO_DRIVER_PROP1, ConstantsSelenium.GECKO_DRIVER_PATH);
-
-        /*
-         * if above property is not working or not opening the application in
-         * browser then try below property
-         * System.setProperty("webdriver.gecko.driver",
-         * "C:\\Testing\\Selenium\\Jars\\GeckoDriver\\geckodriver.exe");
-         */
-
-        // Path to set property for chrome driver
-        System.setProperty(ConstantsSelenium.CHROME_DRIVER_PROP, ConstantsSelenium.CHROME_DRIVER_PATH);
-
-        // Path to set property for IE driver.
-        System.setProperty(ConstantsSelenium.IE_DRIVER_PROP, ConstantsSelenium.IE_DRIVER_PATH);
-
-        // Path to set property for Microsoft Edge driver.
-        System.setProperty(ConstantsSelenium.ME_DRIVER_PROP, ConstantsSelenium.ME_DRIVER_PATH);
-
+    @Test
+    public void allInOneForInterview() {
+        WebDriver driver = new FirefoxDriver();
+        driver.get(ConstantsSelenium.FACEBOOK_URL);
+        WebElement element = driver.findElement(By.id("email"));
+        
+        int width = element.getSize().getWidth();
+        int height = element.getSize().getHeight();
+        
+        int x = element.getLocation().getX();
+        int y = element.getLocation().getY();
+        
+        driver.getWindowHandle(); 	// to get the current window
+        driver.getWindowHandles();	// return list of windows and frames
+        
+        Select select = new Select(element);
+        select.selectByIndex(0);
+        select.selectByValue("");
+        select.selectByVisibleText("");
+        
+        element.getCssValue("background-color");
+        element.getCssValue("color");
+        element.getAttribute("title");
     }
 
-    @Test
+	
+	@Test
     public void basicFirefoxProgWithTitle() {
         WebDriver driver = new FirefoxDriver();
         driver.get(ConstantsSelenium.FACEBOOK_URL);
@@ -241,7 +244,7 @@ public class LearnSeleniumBaseClass extends BaseClass {
      * closing all the popups
      */
     @Test
-    public void handleMultiplePopups() {
+    public void handleMultiplePopupsAndWindows() {
         WebDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://www.naukri.com/");
 

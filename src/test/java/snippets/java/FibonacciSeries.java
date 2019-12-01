@@ -5,6 +5,7 @@ import java.util.List;
 
 public class FibonacciSeries {
 	public static void main(String[] args) {
+		int[] ea = {1,2,3,4};
 		List<Integer> fibonacciList = new ArrayList<Integer>();
 		int a = 0;
 		int b = 1;

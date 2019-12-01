@@ -1,5 +1,10 @@
 package com.testng;
 
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 /**
@@ -16,6 +21,16 @@ import org.testng.annotations.Test;
  */
 public class TestSeleniumUsingCommandPrompt {
 
+	@BeforeSuite
+	public void beforeSuite() {
+		System.out.println("Run before Suite");
+	}
+	
+	@BeforeClass
+	public void beforeClass() {
+		System.out.println("Run before class");
+	}
+	
     @Test
     public void test1() {
         System.out.println("Test1 Done Successfully...");
@@ -30,4 +45,14 @@ public class TestSeleniumUsingCommandPrompt {
     public void test3() {
         System.out.println("Test3 Done Successfully...");
     }
+    
+    @BeforeMethod
+	public void beforeMethod() {
+		System.out.println("Run before method");
+	}
+    
+    @AfterMethod
+	public void afterMethod() {
+		System.out.println("Run after method");
+	}
 }

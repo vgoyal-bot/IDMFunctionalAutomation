@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.idm.ui.basic.WaitInSelenium">
+      <class name="com.testng.TestSeleniumUsingCommandPrompt">
         <methods>
-          <include name="withNormalWait"/>
-          <include name="beforeSuite"/>
+          <include name="test3"/>
+          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.idm.ui.basic.WaitInSelenium -->
+      </class> <!-- com.testng.TestSeleniumUsingCommandPrompt -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

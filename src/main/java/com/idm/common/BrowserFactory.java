@@ -30,6 +30,7 @@ public class BrowserFactory {
         System.setProperty(ConstantsSelenium.CHROME_DRIVER_PROP, ConstantsSelenium.CHROME_DRIVER_PATH);
         driver = new ChromeDriver();
         driver.get(url);
+        driver.manage().window().maximize();
         return driver;
     }
 

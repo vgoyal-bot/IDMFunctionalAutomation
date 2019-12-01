@@ -29,7 +29,7 @@ public class Log4jJarUseInSelenium {
 
         // configure log4j properties file
         PropertyConfigurator.configure("log4j.properties");
-
+        
         WebDriver driver = BrowserFactory.getFirefoxDriver(null);
         logger.info("Browser Opened");
 

@@ -4,9 +4,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 
 /**
- * Tool tip is nothing but the title of that particular element.
+ * First move element to to element using action and class do the mouse hover
  * @author vinitg
  *
  */
@@ -20,9 +21,13 @@ public class Tooltip {
         driver.get(baseUrl);
         String expectedTooltip = "Github";
 
+        
         // Find the Github icon at the top right of the header
         WebElement github = driver.findElement(By.xpath(".//*[@class='soc-ico show-round']/a[4]"));
 
+        Actions action = new Actions(driver);
+        action.moveToElement(github).build().perform();
+        
         //get the value of the "title" attribute of the github icon
         String actualTooltip = github.getAttribute("title");
 

@@ -54,6 +54,7 @@ public class DataDrivenFrameworkUsing2DArray {
         driver.findElement(By.id("user_pass")).clear();
         driver.findElement(By.id("user_pass")).sendKeys(password);
         driver.findElement(By.id("wp-submit")).click();
+        
 
         Thread.sleep(3000);
         Assert.assertTrue(driver.getTitle().contains("Dashboard"));
@@ -65,7 +66,7 @@ public class DataDrivenFrameworkUsing2DArray {
     }
 
     @DataProvider(name = "wordPressData")
-    public void dataProviderMethod() {
+    public String[][] dataProviderMethod() {
         String[][] arrString = new String[3][2];
         arrString[0][0] = "admin1";
         arrString[0][1] = "demo1";
@@ -73,5 +74,7 @@ public class DataDrivenFrameworkUsing2DArray {
         arrString[1][1] = "demo123";
         arrString[2][0] = "admin2";
         arrString[2][1] = "demo1234";
+        
+        return arrString;
     }
 }

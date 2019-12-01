@@ -22,7 +22,7 @@ import com.idm.common.BrowserFactory;
  * @author evingoy
  *
  */
-public class HandleCalender extends BaseClass {
+public class zHandleCalender extends BaseClass {
 
     @Test
     public void test1() throws InterruptedException {

@@ -1,4 +1,4 @@
-package snippets.java.string;
+package snippets.java.stringconcept;
 
 public class ReverseString {
 

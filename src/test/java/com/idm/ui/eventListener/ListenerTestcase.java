@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.idm.common.BrowserFactory;             		
 
-@Listeners(ListenerTest.class)			
+@Listeners(ListenerTest.class)
 public class ListenerTestcase {				
 
 //Test to pass as to verify listeners.		

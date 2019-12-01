@@ -12,6 +12,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +25,23 @@ import com.idm.common.ConstantsSelenium;
 
 public class ComplexScenarioForInterview extends BaseClass {
 
+	/**
+	 * 	Difference between driver.get and driver.navigate.to ?
+		A : driver.get and driver.navigate to performs the same function, the only diffeernece is driver.get 
+		refreshes the page whereas driver.navigate.to – navigates to the url and does not refreshes the page.
+		As driver.get- refreshes the page so history wil be lost, wherras driver.navigate.to - navigate the to that specific url - history will be retained.
+
+	 */
+	@Test
+	public void test2() {
+		WebDriver driver = new ChromeDriver();		
+		String baseUrl = "https://www.facebook.com";
+					
+		driver.get(baseUrl);
+		driver.navigate().to(baseUrl);
+		driver.get(baseUrl);
+	}
+	
     @Test
     public void testBootstrapDropdownUsingFirefox() throws InterruptedException {
         WebDriver driver = new FirefoxDriver();
@@ -78,7 +96,7 @@ public class ComplexScenarioForInterview extends BaseClass {
      * closing all the popups
      */
     @Test
-    public void handleMultiplePopups() {
+    public void handleMultiplePopupsOrWindows() {
         WebDriver chromeDriver = new ChromeDriver();
         chromeDriver.get("https://www.naukri.com/");
 

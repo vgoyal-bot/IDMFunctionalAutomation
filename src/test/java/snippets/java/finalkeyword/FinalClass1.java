@@ -4,9 +4,9 @@ package snippets.java.finalkeyword;
  * We can have private static and final keyword together for a variable.
  * final- is used to keep the value constant.
  * static : is used so that it can be used inside static methods.
- * But why private is used as when we are keeping the variable as gfinal, it will be available only
+ * But why private is used as when we are keeping the variable as final, it will be available only
  * to that class.:
- * No use of using private explicitly for a variable already declared as final.
+ * because we are keeping it as private, so other class cant use it.
  * @author vinitg
  *
  */

@@ -1,18 +1,20 @@
 package snippets.java.methodoverriding;
 
+import java.io.IOError;
+import java.io.IOException;
+
 public class ChildClassPoly extends ParentClassPoly {
 
-    @Override
-    public void display() {
-        System.out.println("Child Class + noArgument");
+    public void scenario2() {
+        System.out.println("only in child Class");
     }
-
+    
     @Override
-    public void display(int a) {
-        System.out.println("Child Class + one int argument");
+    public void scenario3() {
+        System.out.println("both in parent and child override, but child method called");
     }
-
-    public void display(char a) {
-        System.out.println("Child Class + one char argument");
+    
+    public void scenario4() {
+        System.out.println("both in parent and child, but not override, but child method called");
     }
 }

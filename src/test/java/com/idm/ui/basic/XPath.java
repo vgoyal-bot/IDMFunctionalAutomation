@@ -8,8 +8,7 @@ import com.idm.common.BrowserFactory;
 import com.idm.common.ConstantsSelenium;
 
 /**
- * Xpath done from URL : https://www.guru99.com/xpath-selenium.html
- * 
+ * Please check the doc to get thec omplete knowledge
  * @author evingoy
  *
  */

@@ -18,6 +18,7 @@ public class ExtentReport {
         extentReports = new ExtentReports(System.getProperty("user.dir") + "\\ExtentReportResults.html");
         extentTest = extentReports.startTest("Vinit Extent Report Testcases");
     }
+    
 
     @Test
     public void test1() {

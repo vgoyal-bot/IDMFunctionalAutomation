@@ -76,7 +76,7 @@ public class WaitInSelenium {
 
     /**
      * Condition for Explicit wait in selenium webdriver
-     *
+     * 
      * Condition 1- I have a web page which has some login form and after login,
      * it takes a lot of time to load Account page or Home page. This page is
      * dynamic it means sometimes it takes 10 seconds to load the homepage,
@@ -129,13 +129,17 @@ public class WaitInSelenium {
         }
     }
 
+    /**
+     * * By default explicit condition does polling every 0.5sec. and we specify the timeout- which means till what time it should does the polling.
+     * This is the only difference betwen explicit and fluent wait, because in fluent wait we can explicitly mention the polling time whereas in explicit wait , it is default 0.5sec.
+     */
     @Test
     public void fluentWait() {
         WebDriver driver = BrowserFactory.getFirefoxDriver(
                 "http://seleniumpractise.blogspot.in/2016/08/how-to-use-explicit-wait-in-selenium.html");
         driver.findElement(By.xpath(".//*[@id='post-body-7708391096228750161']/button")).click();
 
-        FluentWait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver);
+        FluentWait fluentWait = new FluentWait(driver);
         fluentWait.pollingEvery(1, TimeUnit.SECONDS);
         fluentWait.withTimeout(60, TimeUnit.SECONDS);
 

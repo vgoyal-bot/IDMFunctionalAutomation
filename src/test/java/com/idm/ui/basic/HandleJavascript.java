@@ -21,7 +21,7 @@ public class HandleJavascript extends BaseClass {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		WebElement element = driver.findElement(By.id("u_0_q"));
 		
-		js.executeScript("document.getElementById('email').value='vinit.itm@gmail.com';");
+		Object obj = js.executeScript("document.getElementById('email').value='vinit.itm@gmail.com';");
 		js.executeScript("arguments[0].value='password'", element);
 		js.executeScript("document.getElementById('u_0_q').click();");
 		js.executeScript("arguments[0].click()",element);
@@ -35,6 +35,10 @@ public class HandleJavascript extends BaseClass {
 		
 		js.executeScript("arguments[0].setAttribute('style','border: solid 2px green');", element);		// set the border
 		js.executeScript("document.location.reload");		// refresh the current browser
+		
+		JavascriptExecutor js1 = (JavascriptExecutor)driver;  // - this works
+		JavascriptExecutor js2 = (JavascriptExecutor)(driver);  // - this also works
+//		JavascriptExecutor js3 = JavascriptExecutor(driver);  // - this will give error
 		
 	}
 	

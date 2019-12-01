@@ -1,4 +1,4 @@
-package com.idm.common.generic;
+	package com.idm.common.generic;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -12,6 +12,11 @@ import org.testng.annotations.Test;
 import com.idm.common.BrowserFactory;
 import com.idm.common.ConstantsSelenium;
 
+/**
+ * If we want to store the xpath outside the java classes.
+ * @author vinitg
+ *
+ */
 public class ObjectRepositoryUsingPropertyFile {
 
     @Test

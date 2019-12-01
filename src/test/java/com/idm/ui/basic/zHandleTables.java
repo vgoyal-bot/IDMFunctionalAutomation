@@ -1,5 +1,7 @@
 package com.idm.ui.basic;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
@@ -11,6 +13,7 @@ import org.testng.annotations.Test;
 
 import com.idm.common.BaseClass;
 import com.idm.common.BrowserFactory;
+import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 
 /**
@@ -24,7 +27,7 @@ import com.idm.common.BrowserFactory;
  * @author vinitg
  *
  */
-public class HandleTables extends BaseClass {
+public class zHandleTables extends BaseClass {
 
     /**
      * To count the number of rows and columns in a table using first approach.
@@ -41,6 +44,8 @@ public class HandleTables extends BaseClass {
         String xpathCol = ".//table[@summary='Sample Table']/thead/tr[1]/th";
         eleList = chromeDriver.findElements(By.xpath(xpathCol));
         System.out.println("Number of Columns: " + eleList.size());
+        
+        List<Integer> list = new ArrayList<Integer>();
     }
 
     @Test

@@ -16,7 +16,7 @@ public class ParallelExecution extends BaseClass {
             //find user name text box and fill it
             driver.findElement(By.name("uid")).sendKeys("Driver 1");
             Thread.sleep(10000);
-            
+
             System.out.println("executSessionOne is completed");
             driver.quit();
         }

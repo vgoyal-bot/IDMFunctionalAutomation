@@ -4,8 +4,8 @@
   <artifactId>IDMFunctionalAutomation</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
-  <properties>
-		<suiteXmlFile>testng_parallelExecution.xml</suiteXmlFile>
+  	<properties>
+		<suiteXmlFile>testng.xml</suiteXmlFile>
 		<maven-surefire-plugin.version>2.21.0</maven-surefire-plugin.version>
 	</properties>
 
@@ -149,5 +149,20 @@
 			<artifactId>json</artifactId>
 			<version>20170516</version>
 		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-java -->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-java</artifactId>
+		    <version>1.2.5</version>
+		</dependency>
+				
+		<!-- https://mvnrepository.com/artifact/info.cukes/cucumber-testng -->
+		<dependency>
+		    <groupId>info.cukes</groupId>
+		    <artifactId>cucumber-testng</artifactId>
+		    <version>1.2.5</version>
+		</dependency>
+						
 	</dependencies>
 </project>

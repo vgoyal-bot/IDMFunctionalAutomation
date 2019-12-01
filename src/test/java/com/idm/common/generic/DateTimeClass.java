@@ -14,14 +14,4 @@ public class DateTimeClass {
         System.out.println("Current date and time is " + date1);
         return date1;
     }
-
-    public static String getDateinMMDDYYYYFormat() {
-        DateFormat dateFormat = new SimpleDateFormat("MM/dd/yyyy ");
-        Date date = new Date();
-
-        String date1 = dateFormat.format(date);
-        System.out.println(date1);
-        return date1;
-    }
-
 }

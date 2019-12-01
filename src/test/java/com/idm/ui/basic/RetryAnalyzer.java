@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import com.idm.common.BrowserFactory;
 
-public class RetryorRerunFailedTestCases implements IRetryAnalyzer {
+public class RetryAnalyzer implements IRetryAnalyzer {
 
     int minRetryCount = 0;
 
@@ -35,12 +35,9 @@ public class RetryorRerunFailedTestCases implements IRetryAnalyzer {
  */
 class VerifyTitle
 {
-    @Test(retryAnalyzer=RetryorRerunFailedTestCases.class)
+    @Test(retryAnalyzer=RetryAnalyzer.class)
     public void verifySeleniumTitle()
     {
-        WebDriver driver=BrowserFactory.getFirefoxDriver("http://www.learn-automation.com");
-
-        // Here we are verifying that title contains QTP or not. This test will fail because title does not contain QTP
-        Assert.assertTrue(driver.getTitle().contains("QTP"));
+       Assert.assertEquals(10, 11);
     }
 }
