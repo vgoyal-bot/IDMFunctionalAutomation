@@ -2,7 +2,6 @@ package com.idm.ui.basic;
 
 
 import java.util.concurrent.TimeUnit;
-import java.util.function.Function;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -63,7 +62,7 @@ public class WaitInSelenium {
      * @throws InterruptedException
      */
     @Test
-    public void implicitWait() throws InterruptedException {
+    public void implicitWait() throws Exception {
         WebDriver driver = new FirefoxDriver();
         driver.get(ConstantsSelenium.FACEBOOK_URL);
         driver.findElement(By.id("email")).sendKeys("vinit.itm@gmail.com");

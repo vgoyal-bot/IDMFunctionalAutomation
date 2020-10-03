@@ -13,7 +13,6 @@ import org.testng.annotations.Test;
 
 import com.idm.common.BaseClass;
 import com.idm.common.BrowserFactory;
-import com.sun.xml.internal.ws.policy.privateutil.PolicyUtils.Collections;
 
 
 /**

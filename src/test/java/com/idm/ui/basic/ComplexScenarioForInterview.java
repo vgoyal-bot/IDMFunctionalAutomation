@@ -25,13 +25,13 @@ import com.idm.common.ConstantsSelenium;
 
 public class ComplexScenarioForInterview extends BaseClass {
 
-	/**
-	 * 	Difference between driver.get and driver.navigate.to ?
-		A : driver.get and driver.navigate to performs the same function, the only diffeernece is driver.get 
-		refreshes the page whereas driver.navigate.to – navigates to the url and does not refreshes the page.
-		As driver.get- refreshes the page so history wil be lost, wherras driver.navigate.to - navigate the to that specific url - history will be retained.
+    /**
+     Difference between driver.get and driver.navigate.to
+     A : driver.get and driver.navigate to performs the same function, the only diffeernece is driver.get
+     refreshes the page whereas driver.navigate.to navigates to the url and does not refreshes the page.
+     As driver.get- refreshes the page so history wil be lost, wherras driver.navigate.to - navigate the to that specific url - history will be retained.
 
-	 */
+     */
 	@Test
 	public void test2() {
 		WebDriver driver = new ChromeDriver();		

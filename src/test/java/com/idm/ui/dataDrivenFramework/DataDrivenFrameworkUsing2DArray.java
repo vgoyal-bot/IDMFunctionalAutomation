@@ -47,7 +47,7 @@ public class DataDrivenFrameworkUsing2DArray {
     WebDriver driver;
 
     @Test(dataProvider = "wordPressData")
-    public void test(String username, String password) throws InterruptedException {
+    public void test(String username, String password, String e) throws InterruptedException {
         driver = BrowserFactory.getFirefoxDriver(ConstantsSelenium.DEMOSITE_URL);
         driver.findElement(By.id("user_login")).clear();
         driver.findElement(By.id("user_login")).sendKeys(username);
@@ -66,7 +66,7 @@ public class DataDrivenFrameworkUsing2DArray {
     }
 
     @DataProvider(name = "wordPressData")
-    public String[][] dataProviderMethod() {
+  public String[][] dataProviderMethod() {
         String[][] arrString = new String[3][2];
         arrString[0][0] = "admin1";
         arrString[0][1] = "demo1";

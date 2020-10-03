@@ -29,7 +29,7 @@ public class RetryAnalyzer implements IRetryAnalyzer {
 }
 
 /**
- * Here we have to specify the class – In our case class name is
+ * Here we have to specify the class In our case class name is
  * RetryorRerunFailedTestCases
  * @author evingoy
  */

@@ -1,5 +1,5 @@
-com\idm\common\BaseClass.class
-com\idm\common\BrowserFactory.class
-com\idm\common\ConstantsSelenium.class
-com\idm\common\Helper.class
-com\utilities\ModifyXMLFile.class
+com/idm/common/BaseClass.class
+com/idm/common/ConstantsSelenium.class
+com/idm/common/BrowserFactory.class
+com/idm/common/Helper.class
+com/utilities/ModifyXMLFile.class
